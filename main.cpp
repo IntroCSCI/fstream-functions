@@ -7,29 +7,12 @@ int huntForChar(fstream&, char);
 void differences(fstream&, fstream &);
 void setToBeginning(fstream &);
 
-struct FileData {
-  string name;
-  int words;
-}
 
 int main() {
   fstream file1;
   fstream file2;
   string filename1;
   string filename2;
-  vector <FileData> files;
-  FileData temp;
-  temp.name = "files/a.txt";
-  temp.words = 100;
-  files.push_back(temp);
-  temp.name = "files/b.txt";
-  temp.words = 12;
-  files.push_back(temp);
-  temp.name = "files/1.txt";
-  temp.words = 1;
-  files.push_back(temp);
-
-
   char find;
 
   cout << "Which file to open for file 1? ";
@@ -56,8 +39,7 @@ int main() {
   else {
     cout << find << " first found at position " << location1 << endl;
   }
-  first.words = wordCount(file1);
-  cout << "Words: " << first.words << endl;
+  cout << "Words: " << wordCount(file1) << endl;
 
   cout << endl << "File: " << filename2 << endl;
   //
